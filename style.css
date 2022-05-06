@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Spartan', sans-serif;
+    min-height: 100vh;
+    font-size: 3.2rem;
+    background-color: hsl(222, 26%, 31%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: fit-content;
+}
+
+main > section {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+section > h1 {
+    font-size: 3.2rem;
+    height: 3.2rem;
+    align-self: center;
+}
+
+figure {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+main {
+    width: 55rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    width: 7.3rem;
+    list-style: none;
+    gap: .4rem;
+}
+
+figcaption {
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    margin-bottom: .3rem;
+}
+
+ul li:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    user-select: none;
+}
+
+p {
+    font-size: 1.1rem;
+    width: .8rem;
+}
+
+ul > li:last-of-type {
+    padding: 0 .6rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.6rem;
+    border-radius: 2rem;
+    background-color: hsl(223, 31%, 20%);
+    transition: ease all 1s;
+}
+
+ul > li:last-of-type:hover {
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: hsl(6, 63%, 50%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+form > section:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(224, 36%, 15%);
+    border-radius: 1rem;
+    height: 13rem;
+}
+
+output {
+    color: white;
+    height: 5rem;
+    width: 80%;
+    text-align: end;
+    font-size: 5rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+output::-webkit-scrollbar {
+    display: none;
+}
+
+form > section:last-of-type {
+    display: grid;
+    justify-content: center;
+    align-items: flex-end;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    gap: 2.5rem;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+input {
+    all: unset;
+    text-align: center;
+    border-radius: 1rem;
+    height: 5.5rem;
+    transition: border .1s;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input:active, #red:active {
+    border-bottom: unset;
+    border-bottom: 0 solid hsl(224, 28%, 35%);
+}
+
+.white {
+    color: hsl(221, 14%, 31%);
+    background-color: hsl(30, 25%, 89%);
+    border-top: .5rem solid hsl(30, 25%, 89%);
+    border-bottom: .5rem solid hsl(28, 16%, 65%);
+}
+
+.dark-blue {
+    color: white;
+    background-color: hsl(225, 21%, 49%);
+    border-top: .5rem solid hsl(225, 21%, 49%);
+    border-bottom: .5rem solid hsl(224, 28%, 35%);
+}
+
+#red {
+    color: white;
+    background-color: hsl(6, 63%, 50%);
+    border-top: .5rem solid hsl(6, 63%, 50%);
+    border-bottom: .5rem solid hsl(6, 70%, 34%);
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+input:nth-last-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
